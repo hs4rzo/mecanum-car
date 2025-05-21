@@ -198,7 +198,6 @@ int readDistanceSensor() {
 
 void loop() {
   ArduinoOTA.handle();
-  int timedelay = 20;
   String message = "0";
   unsigned long now = millis();
   if (now - lastRecvTime > SIGNAL_TIMEOUT) {
@@ -242,5 +241,5 @@ void loop() {
   mtrLFpwmValue = lf_speed;
   mtrRRpwmValue = rr_speed;
   mtrLRpwmValue = lr_speed;
-  //delay(timedelay);
+
 }
